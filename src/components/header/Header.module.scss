@@ -44,6 +44,69 @@
                     }
                 }
             }
+            .contact{
+                width: 25%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .valyuta{
+                    width: 20%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: normal;
+                        font-style: normal;
+                        color: rgb(0,0,0);
+                        border-bottom: 2px transparent solid;
+                        transition: 0.5s ease;
+                        &:hover{
+                            cursor: pointer;
+                            color: 
+                            rgb(40, 33, 65);
+                        }
+                        &:active{
+                            border-bottom: 2px black solid;
+                        }
+                    }
+                }
+                .number{
+                    width: 50%;
+                    p{
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: normal;
+                        font-style: normal;
+                    }
+                }
+                .selects{
+                    width: 18%;
+                    border-radius: 5px;
+                    padding: 6px 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #282141;
+                    select{
+                        border: none;
+                        background-color: transparent;color: white;
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: normal;
+                        font-style: normal;
+                        outline: none;
+                        option{
+                            background-color: white;
+                            color: black;
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
