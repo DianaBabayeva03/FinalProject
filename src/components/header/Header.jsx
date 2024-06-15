@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Header.module.scss'
+import logoImg from '../../image/logo.svg'
 
 const Header = () => {
   return (
@@ -29,7 +30,27 @@ const Header = () => {
                 </div>
             </div>
         </div>
-        <div className={styles.headerBottom}></div>
+        <div className={styles.headerBottom}>
+          <div className={styles.container}>
+            <div className={styles.logo}>
+              <img src={logoImg} alt="logo" />
+            </div>
+            <div className={styles.navBar}>
+              <ul>
+                <li><a href="">Ana Səhifə</a></li>
+                <li><a href="">Tariflər</a></li>
+                <li><a href="">Mağazalar</a></li>
+                <li><a href="">Xidmətlər</a></li>
+                <li><a href="">Xəbərlər</a></li>
+                <li><a href="">Əlaqə</a></li>
+              </ul>
+            </div>
+            <div className={styles.logIn}>
+              <span>Giriş et</span>
+              <button>Qeydiyyat</button>
+            </div>
+          </div>
+        </div>
     </div>
   )
 }

@@ -55,6 +55,7 @@
                     justify-content: space-between;
                     align-items: center;
                     span{
+                        font-family: 'Nunito';
                         font-size: 14px;
                         font-weight: 600;
                         line-height: normal;
@@ -75,6 +76,7 @@
                 .number{
                     width: 50%;
                     p{
+                        font-family: 'Nunito';
                         font-size: 14px;
                         font-weight: 600;
                         line-height: normal;
@@ -97,6 +99,7 @@
                         line-height: normal;
                         font-style: normal;
                         outline: none;
+                        font-family: 'Nunito';
                         option{
                             background-color: white;
                             color: black;
@@ -104,6 +107,87 @@
                                 color: white;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    .headerBottom{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.283);
+            .logo{
+                width: 12%;
+                img{
+                    width: 100%;
+                }
+            }
+            .navBar{
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ul{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    li{
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            font-family: 'Nunito';
+                            font-size: 16px;
+                            font-weight: 600;
+                            font-style: normal;
+                            line-height: normal;
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .logIn{
+                width: 22%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span{
+                    width: 30%;
+                    height: 30px;
+                    border-left: 1px solid rgba(128, 128, 128, 0.308);
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    font-family: 'Nunito';
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    line-height: normal;
+                    color: black;
+                }
+                button{
+                    font-family: 'Nunito';
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                    background-color: #7B5CE1;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 15px 35px;
+                    transition: 0.5s ease;
+                    &:hover{
+                        background-color: #A086E5;
+
                     }
                 }
             }
