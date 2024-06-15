@@ -2,16 +2,15 @@ import React from 'react'
 import Header from '../../components/header/Header'
 import styles from './Home.module.scss'
 import AddFaktura from '../../components/addfaktura/AddFaktura'
-import Carusel from '../../components/carousel/Carusel'
-import Karusel from '../../components/karusel/Karusel'
 import InformationAndOurServices from '../../components/informationandourservices/InformationAndOurServices'
+// import Slider from '../../components/Sliders/Slider'
 
 const Home = () => {
   return (
     <div className={styles.backGround}>
         <Header />
         <AddFaktura />
-        
+        {/* <Slider /> */}
         <InformationAndOurServices />
     </div>
   )
