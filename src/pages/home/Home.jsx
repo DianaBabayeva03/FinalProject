@@ -3,6 +3,7 @@ import Header from '../../components/header/Header'
 import styles from './Home.module.scss'
 import AddFaktura from '../../components/addfaktura/AddFaktura'
 import InformationAndOurServices from '../../components/informationandourservices/InformationAndOurServices'
+import TarrifsOnAllProducts from '../../components/TarrifsOnAllProducts/TarrifsOnAllProducts'
 // import Slider from '../../components/Sliders/Slider'
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <AddFaktura />
         {/* <Slider /> */}
         <InformationAndOurServices />
+        <TarrifsOnAllProducts />
     </div>
   )
 }
