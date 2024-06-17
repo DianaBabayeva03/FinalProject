@@ -100,6 +100,7 @@
                         font-style: normal;
                         outline: none;
                         font-family: 'Nunito';
+                        cursor: pointer;
                         option{
                             background-color: white;
                             color: black;
@@ -187,7 +188,7 @@
                     transition: 0.5s ease;
                     &:hover{
                         background-color: #A086E5;
-
+                        cursor: pointer;
                     }
                 }
             }

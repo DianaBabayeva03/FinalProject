@@ -4,6 +4,8 @@ import styles from './Home.module.scss'
 import AddFaktura from '../../components/addfaktura/AddFaktura'
 import InformationAndOurServices from '../../components/informationandourservices/InformationAndOurServices'
 import TarrifsOnAllProducts from '../../components/TarrifsOnAllProducts/TarrifsOnAllProducts'
+import MobilTetbiq from '../../components/MobilTetbiq/MobilTetbiq'
+import HoWeWork from '../../components/HoWeWork/HoWeWork'
 // import Slider from '../../components/Sliders/Slider'
 
 const Home = () => {
@@ -12,8 +14,10 @@ const Home = () => {
         <Header />
         <AddFaktura />
         {/* <Slider /> */}
+        <MobilTetbiq />
         <InformationAndOurServices />
         <TarrifsOnAllProducts />
+        <HoWeWork />
     </div>
   )
 }
