@@ -9,6 +9,7 @@ import HoWeWork from '../../components/HoWeWork/HoWeWork'
 import News from '../../components/News/News'
 import Brands from '../../components/Brands/Brands'
 import FollowYoutube from '../../components/FollowYoutube/FollowYoutube'
+import FollowWe from '../../components/FollowWe/FollowWe'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <News />
         <Brands />
         <FollowYoutube />
+        <FollowWe />
     </div>
   )
 }
