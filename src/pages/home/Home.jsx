@@ -6,18 +6,22 @@ import InformationAndOurServices from '../../components/informationandourservice
 import TarrifsOnAllProducts from '../../components/TarrifsOnAllProducts/TarrifsOnAllProducts'
 import MobilTetbiq from '../../components/MobilTetbiq/MobilTetbiq'
 import HoWeWork from '../../components/HoWeWork/HoWeWork'
-// import Slider from '../../components/Sliders/Slider'
+import News from '../../components/News/News'
+import Brands from '../../components/Brands/Brands'
+import FollowYoutube from '../../components/FollowYoutube/FollowYoutube'
 
 const Home = () => {
   return (
     <div className={styles.backGround}>
         <Header />
         <AddFaktura />
-        {/* <Slider /> */}
         <MobilTetbiq />
         <InformationAndOurServices />
         <TarrifsOnAllProducts />
         <HoWeWork />
+        <News />
+        <Brands />
+        <FollowYoutube />
     </div>
   )
 }
