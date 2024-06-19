@@ -10,6 +10,7 @@ import News from '../../components/News/News'
 import Brands from '../../components/Brands/Brands'
 import FollowYoutube from '../../components/FollowYoutube/FollowYoutube'
 import FollowWe from '../../components/FollowWe/FollowWe'
+import Footer from '../../components/footer/Footer'
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
         <Brands />
         <FollowYoutube />
         <FollowWe />
+        <Footer />
     </div>
   )
 }

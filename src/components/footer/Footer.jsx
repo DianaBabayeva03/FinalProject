@@ -14,9 +14,10 @@ const Footer = () => {
                     <h2>Bizimlə əlaqə</h2>
                     <p>Saytın əlaqə formundan və buradan göndərilən mesajlar iş günləri ərzində növbəli şəkildə cavablandırılacaqdır</p>
                     <div className={styles.inpBox}>
-                        <input type="text" className={styles.ad}/>
-                        <input type="email" className={styles.email}/>
-                        <input type="text" className={styles.mesaj}/>
+                        <input type="text" className={styles.ad} placeholder='Adınız'/>
+                        <input type="email" className={styles.email} placeholder='E-mail'/>
+                        {/* <input type="text" className={styles.mesaj}/> */}
+                        <textarea name="" id="" placeholder='Mesajınız'></textarea>
                     </div>
                     <button>Göndər</button>
                 </div>
@@ -52,11 +53,11 @@ const Footer = () => {
             <div className={styles.footerBottom}>
                 <div className={styles.logoBox}>
                     <div className={styles.logo}>
-                        <img src={logofefeffeeeefefccc} alt="logo" />
+                        <img src={logo} alt="logo" />
                     </div>
                     <p>© 2021 Kargolux | Bütün Hüquqlar Qorunur</p>
                 </div>
-                <div className={styles.mobilTetbirRight}>
+                <div className={styles.mobilTetbiqRight}>
                     <span>Mobil Tetbiq</span>
                     <img src={playStore} alt="google play" />
                     <img src={appStore} alt="app store" />
