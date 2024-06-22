@@ -1,8 +1,11 @@
 import React from 'react'
+import LogIn from '../../components/Girish/LogIn'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+      <LogIn />
+    </div>
   )
 }
 

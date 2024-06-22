@@ -56,8 +56,8 @@ const Header = () => {
           </div>
           <div className={styles.navBar}>
             <ul>
-              <li><a href="">Ana Səhifə</a></li>
-              <li><a href="">Tariflər</a></li>
+              <li onClick={() => navigation('/')}><a href="">Ana Səhifə</a></li>
+              <li onClick={() => navigation('/tariffs')}><a href="">Tariflər</a></li>
               <li><a href="">Mağazalar</a></li>
               <li><a href="">Xidmətlər</a></li>
               <li><a href="">Xəbərlər</a></li>

@@ -7,6 +7,7 @@ import AboutUs from '../pages/AboutUs/AboutUs'
 import Faq from '../pages/Faq/Faq'
 import KargoChatdirilma from '../pages/KargoChatdirilma/KargoChatdirilma'
 import ShexsiMelumatlar from '../pages/ShexsiMelumatlar/ShexsiMelumatlar'
+import Tarifler from '../pages/Tarifler/Tarifs'
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
             <Route path='/faq' element={<Faq />} />
             <Route path='/kargo-chatdirilma-shertleri' element={<KargoChatdirilma />} />
             <Route path='/shexsi-melumatlarin-qorunmasi' element={<ShexsiMelumatlar />} />
+            <Route path='/tariffs' element={<Tarifler />} />
         </Routes>
     </BrowserRouter>
   )
