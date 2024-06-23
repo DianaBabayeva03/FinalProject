@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
-import { type } from '@testing-library/user-event/dist/type';
+
 
 const userSchema = mongoose.Schema(
   {
