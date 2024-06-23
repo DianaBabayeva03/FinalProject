@@ -8,6 +8,8 @@ import Faq from '../pages/Faq/Faq'
 import KargoChatdirilma from '../pages/KargoChatdirilma/KargoChatdirilma'
 import ShexsiMelumatlar from '../pages/ShexsiMelumatlar/ShexsiMelumatlar'
 import Tarifler from '../pages/Tarifler/Tarifs'
+import Dashboard from '../pages/Dashboard/Dashboard'
+import Profile from '../pages/Profile/Profile'
 
 const Router = () => {
   return (
@@ -16,6 +18,8 @@ const Router = () => {
             <Route path='/' element={<Home />}/>
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/profile' element={<Profile />} />
             <Route path='/about' element={<AboutUs />} />
             <Route path='/faq' element={<Faq />} />
             <Route path='/kargo-chatdirilma-shertleri' element={<KargoChatdirilma />} />
