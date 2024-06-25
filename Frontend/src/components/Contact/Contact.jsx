@@ -120,9 +120,6 @@ const Contact = () => {
                 <div className={styles.contactsMap}>
                     <iframe 
                         src={selectedBranch.coordinates} 
-                        // width="600" 
-                        // height="450" 
-                        // style={{ border: 0 }} 
                         allowFullScreen="" 
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade">

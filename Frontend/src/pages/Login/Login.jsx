@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import LogIn from '../../components/Girish/LogIn'
 import styles from './Login.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,7 +22,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userInfo) {
-      navigation('/profile');
+      navigation('/');
     }
   }, [navigation, userInfo]);
 
@@ -36,9 +35,9 @@ const Login = () => {
     try {
       const res = await login({ email, password }).unwrap();
       dispatch(setCredentials({ ...res }));
-      navigation('/dashboard');
+      navigation('/');
     } catch (error) {
-      toast.error('Sehv email ya sifre')
+      toast.error('E-mail və ya şifrə səhvdir!')
     }
   }
 

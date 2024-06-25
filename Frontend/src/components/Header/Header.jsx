@@ -6,18 +6,18 @@ import { setCurrency } from '../../redux/slices/currencySlice';
 import { setLanguage } from '../../redux/slices/languageSlice';
 import { useNavigate } from 'react-router-dom';
 import { TiThMenu } from "react-icons/ti";
-import { toggleMenu, closeMenu } from '../../redux/slices/menuSlice'; 
+import { toggleMenu, closeMenu } from '../../redux/slices/menuSlice';
 import { RiCloseLargeLine } from "react-icons/ri";
 import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube } from 'react-icons/sl';
 import { SiWhatsapp } from 'react-icons/si';
 import { PiTelegramLogoDuotone } from 'react-icons/pi';
-
 
 const Header = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector(state => state.menu.isOpen);
   const currency = useSelector((state) => state.currency.currency);
   const language = useSelector((state) => state.language.language);
+  const userInfo = useSelector((state) => state.auth.userInfo);
 
   const handleMenuToggle = () => {
     dispatch(toggleMenu());
@@ -73,13 +73,13 @@ const Header = () => {
             <button onClick={handleMenuToggle}><TiThMenu /></button>
             {isOpen && (
               <div className={styles.menuBar}>
-                <div className={styles.close}  onClick={handleMenuClose}>
+                <div className={styles.close} onClick={handleMenuClose}>
                   <RiCloseLargeLine />
                 </div>
                 <ul>
                   <li onClick={() => navigate('/')}><a href="">Ana Səhifə</a></li>
                   <li onClick={() => navigate('/tariffs')}><a href="">Tariflər</a></li>
-                  <li><a href="">Mağazalar</a></li>
+                  <li onClick={() => navigate('/shops')}><a href="">Mağazalar</a></li>
                   <li onClick={() => navigate('/kargo-xidmetleri')}><a href="">Xidmətlər</a></li>
                   <li><a href="">Xəbərlər</a></li>
                   <li onClick={() => navigate('/contact')}><a href="">Əlaqə</a></li>
@@ -95,7 +95,7 @@ const Header = () => {
                   <button><SiWhatsapp /></button>
                   <button><PiTelegramLogoDuotone /></button>
                   <button><SlSocialYoutube /></button>
-              </div>
+                </div>
               </div>
             )}
           </div>
@@ -103,15 +103,26 @@ const Header = () => {
             <ul>
               <li onClick={() => navigate('/')}><a href="">Ana Səhifə</a></li>
               <li onClick={() => navigate('/tariffs')}><a href="">Tariflər</a></li>
-              <li><a href="">Mağazalar</a></li>
+              <li onClick={() => navigate('/shops')}><a href="">Mağazalar</a></li>
               <li onClick={() => navigate('/kargo-xidmetleri')}><a href="">Xidmətlər</a></li>
               <li><a href="">Xəbərlər</a></li>
               <li onClick={() => navigate('/contact')}><a href="">Əlaqə</a></li>
             </ul>
           </div>
           <div className={styles.logIn}>
-            <span onClick={() => navigate('/login')}>Giriş et</span>
-            <button onClick={() => navigate('/register')}>Qeydiyyat</button>
+            {userInfo ? (
+              <span style={{width:100, gap:10}}  onClick={() => navigate('/profile')}>{`${userInfo.name}`}
+                <div style={{backgroundColor:'rgb(255, 109, 103)', borderRadius:50, width:36, display:'flex', justifyContent:'center', alignItems:'center'}} className={styles.userImg}>
+                  <img style={{width:30}} src="https://kargolux.az/kargolux/assets/images/icons/user-circle.svg" alt="userprofile" />
+                </div>
+              </span>
+              
+            ) : (
+              <>
+                <span onClick={() => navigate('/login')}>Giriş et</span>
+                <button onClick={() => navigate('/register')}>Qeydiyyat</button>
+              </>
+            )}
           </div>
         </div>
       </div>

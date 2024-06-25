@@ -12,6 +12,7 @@ import Dashboard from '../pages/Dashboard/Dashboard'
 import Profile from '../pages/Profile/Profile'
 import Xidmetler from '../pages/Xidmetler/Xidmetler'
 import Elaqe from '../pages/Elaqe/Elaqe'
+import Magazalar from '../pages/Magazalar/Magazalar'
 
 const Router = () => {
   return (
@@ -29,6 +30,7 @@ const Router = () => {
             <Route path='/tariffs' element={<Tarifler />} />
             <Route path='/kargo-xidmetleri' element={<Xidmetler />} />
             <Route path='/contact' element={<Elaqe />} />
+            <Route path='/shops' element={<Magazalar />} />
         </Routes>
     </BrowserRouter>
   )

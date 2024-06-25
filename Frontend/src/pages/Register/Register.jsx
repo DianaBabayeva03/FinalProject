@@ -12,16 +12,15 @@ import appStore from '../../image/appstore.svg';
 import visaMaster from '../../image/visamaster.svg';
 import { IoCheckmarkCircle } from "react-icons/io5";
 
-
 const Register = () => {
   const [name, setName] = useState('');
-  const [surname, setSurname] = useState('')
+  const [surname, setSurname] = useState('');
   const [birthData, setBirthData] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const navigation = useNavigate();
+  const navigate = useNavigate(); 
   const dispatch = useDispatch();
 
   const [register, { isLoading }] = useRegisterMutation();
@@ -30,24 +29,22 @@ const Register = () => {
 
   useEffect(() => {
     if (userInfo) {
-      navigation('/dashboard');
+      navigate('/');
     }
-  }, [navigation, userInfo]);
-
-
+  }, [navigate]);
 
   const handleRegister = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      toast.error('Sifreler duz deyil');
+      toast.error('Şifrələr eyni deyil'); 
       return;
     }
     try {
-      const res = await register({ name, email, password }).unwrap();
+      const res = await register({ name, surname, birthData, email, password }).unwrap();
       dispatch(setCredentials({ ...res }));
-      navigation('/');
+      navigate('/');
     } catch (error) {
-      toast.error('Register fail');
+      toast.error('Səhv: Qeydiyyat uğursuz oldu!');
     }
   }
 
@@ -55,7 +52,7 @@ const Register = () => {
     <div className={styles.registerBox}>
       <div className={styles.container}>
         <div className={styles.headerBox}>
-          <div className={styles.logo} onClick={() => navigation('/')}>
+          <div className={styles.logo} onClick={() => navigate('/')}>
             <img src={logo} alt="logo" />
           </div>
         </div>
@@ -93,44 +90,43 @@ const Register = () => {
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Şifrə"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <input
               type="password"
               name="confirmPassword"
-              placeholder="Confirm Password"
+              placeholder="Təkrar şifrə"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
-              <h6>
-                <h4><IoCheckmarkCircle /></h4>
-                Məsafəli <span>satış sözləşməsini</span> qəbul edirəm.
-              </h6>
-                <p className={styles.loginmessage} onClick={() => navigation('/login')}>
-                <span>Giriş et</span>
-                </p>
-                <button type="submit" disabled={isLoading}>
-                  {isLoading ? 'User creating' : 'Qeydiyyatdan keç'}
-                </button>
+            <h6>
+              <h4><IoCheckmarkCircle /></h4>
+              Mesafəli <span>satış sözləşmesini</span> qəbul edirəm.
+            </h6>
+            <p className={styles.loginMessage} onClick={() => navigate('/login')}>
+              <span>Giriş et</span>
+            </p>
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? 'İstifadəçi yaradılır' : 'Qeydiyyatdan keç'}
+            </button>
           </form>
-          
         </div>
 
         <div className={styles.footerBox}>
           <div className={styles.textBox}>
-              <p>© 2021 Kargolux | Bütün Hüquqlar Qorunur</p>
+            <p>© 2021 Kargolux | Bütün Hüquqlar Qorunur</p>
           </div>
           <div className={styles.mobilTetbiqRight}>
-            <span>Mobil Tətbiqi yüklə</span>
+            <span>Mobil tətbiqi yüklə</span>
             <img src={playStore} alt="google play" />
             <img src={appStore} alt="app store" />
             <img src={visaMaster} alt="visa mastercard" />
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   );
 };
 

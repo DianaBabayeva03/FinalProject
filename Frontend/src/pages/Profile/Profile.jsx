@@ -5,6 +5,9 @@ import styles from "./Profile.module.scss";
 import { useNavigate } from "react-router-dom";
 import { logout, setCredentials } from "../../redux/slices/authSlice";
 import { useLogoutMutation, useUpdateUserMutation } from "../../redux/slices/usersApiSlice";
+import Header from "../../components/Header/Header";
+import Footer from '../../components/Footer/Footer';
+import UserProfile from "../../components/UserProfile/UserProfile";
 
 const Profile = () => {
   const [email, setEmail] = useState("");
@@ -61,53 +64,58 @@ const Profile = () => {
   }, [userInfo]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.headBox}>
-        <button onClick={() => navigate("/dashboard")}>Back</button>
-        <button onClick={handleLogout}>Logout</button>
-      </div>
-      <div className={styles.main}>
-        <div className={styles.proContainer}>
-          <h1>Profile</h1>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <div className={styles.inputGroup}>
-              <label>Name</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            <div className={styles.inputGroup}>
-              <label>Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div className={styles.inputGroup}>
-              <label>Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div className={styles.inputGroup}>
-              <label>Confirm Password</label>
-              <input
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </div>
-            <button type="submit" className={styles.submitButton}>
-              {isLoading ? "Updating..." : "Update"}
-            </button>
-          </form>
+    <div className={styles.profileBox}>
+      <Header />
+      {/* <div className={styles.container}>
+        <div className={styles.headBox}>
+          <button onClick={() => navigate("/dashboard")}>Back</button>
+          <button onClick={handleLogout}>Logout</button>
         </div>
-      </div>
+        <div className={styles.main}>
+          <div className={styles.proContainer}>
+            <h1>Profile</h1>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.inputGroup}>
+                <label>Name</label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label>Email</label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label>Password</label>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label>Confirm Password</label>
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+              </div>
+              <button type="submit" className={styles.submitButton}>
+                {isLoading ? "Updating..." : "Update"}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div> */}
+      <UserProfile />
+      <Footer />
     </div>
   );
 };
