@@ -11,7 +11,7 @@ const authUser = async (req, res) => {
       res.status(201).json({
         _id: user._id,
         name: user.name,
-        email: user.email,
+        email: user.email
       });
     } else {
       res.status(400).json({ message: 'Email ya da parola hatalı' });
@@ -43,7 +43,7 @@ const registerUser = async (req, res) => {
       res.status(201).json({
         _id: user._id,
         email: user.email,
-        name: user.name
+        name: user.name,
       });
     } else {
       res.status(400).json({ message: "User not added" });
