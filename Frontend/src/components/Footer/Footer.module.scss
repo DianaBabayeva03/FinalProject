@@ -217,3 +217,285 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .footerBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .footerTop{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                padding: 30px 0;
+                .bizimleElaqe{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-right: none;
+                    h2{
+                        font-size: 28px;
+                    }
+                    .inpBox{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        .ad{
+                            width: 46%;
+                        }
+                        .email{
+                            width: 46%;
+                        }
+                        textarea{
+                            min-width: 100%;
+                        }
+                    }
+                    button{
+                        width: 50%;
+                    }
+                }
+                .anaSehife{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .unvan{
+                    width: 100%;
+                    .card{
+                        width: 100%;
+                        h3{
+                            font-size: 16px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .footerBottom{
+                border-top: 1px solid rgba(255, 255, 255, 0.600);
+                padding: 30px 0 20px 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .logoBox{
+                    display: none;
+                }
+                .mobilTetbiqRight{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 15px;
+                    span{
+                        width: 50%;
+                        font-size: 14px;
+                    }
+                    img{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .footerBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .footerTop{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                padding: 30px 0;
+                .bizimleElaqe{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-right: none;
+                    h2{
+                        font-size: 28px;
+                    }
+                    .inpBox{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        .ad{
+                            width: 46%;
+                        }
+                        .email{
+                            width: 46%;
+                        }
+                        textarea{
+                            min-width: 100%;
+                        }
+                    }
+                    button{
+                        width: 50%;
+                    }
+                }
+                .anaSehife{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .unvan{
+                    width: 100%;
+                    .card{
+                        width: 100%;
+                        h3{
+                            font-size: 16px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .footerBottom{
+                border-top: 1px solid rgba(255, 255, 255, 0.600);
+                padding: 30px 0 20px 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .logoBox{
+                    display: none;
+                }
+                .mobilTetbiqRight{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 15px;
+                    span{
+                        width: 16%;
+                        font-size: 14px;
+                    }
+                    img{
+                        width: 24%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .footerBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .footerTop{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                padding: 30px 0;
+                .bizimleElaqe{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-right: none;
+                    h2{
+                        font-size: 28px;
+                    }
+                    .inpBox{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        .ad{
+                            width: 46%;
+                        }
+                        .email{
+                            width: 46%;
+                        }
+                        textarea{
+                            min-width: 100%;
+                        }
+                    }
+                    button{
+                        width: 45%;
+                    }
+                }
+                .anaSehife{
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .unvan{
+                    width: 40%;
+                    .card{
+                        width: 100%;
+                        h3{
+                            font-size: 16px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .footerBottom{
+                border-top: 1px solid rgba(255, 255, 255, 0.600);
+                padding: 30px 0 20px 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                .logoBox{
+                    display: none;
+                }
+                .mobilTetbiqRight{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 15px;
+                    span{
+                        width: 16%;
+                        font-size: 14px;
+                    }
+                    img{
+                        width: 24%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .footerBox{
+        width: 100%;
+        .container{
+            width: 99%;
+        }
+    }
+}

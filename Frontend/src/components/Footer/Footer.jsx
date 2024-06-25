@@ -16,7 +16,6 @@ const Footer = () => {
                     <div className={styles.inpBox}>
                         <input type="text" className={styles.ad} placeholder='Adınız'/>
                         <input type="email" className={styles.email} placeholder='E-mail'/>
-                        {/* <input type="text" className={styles.mesaj}/> */}
                         <textarea name="" id="" placeholder='Mesajınız'></textarea>
                     </div>
                     <button>Göndər</button>

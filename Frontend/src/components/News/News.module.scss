@@ -133,3 +133,162 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .news{
+        width: 100%;
+        .container{
+            width: 90%;
+            .newsText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .newsCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                .newsCard{
+                    width: 100%;
+                    .cardImg{
+                        width: 100%;
+                    }
+                    .cardText{
+                        width: 100%;
+                        h2{
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                        .etrafli{
+                            width: 100%;
+                            button{
+                                width: 20%;
+                            }
+                            p{
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .news{
+        width: 100%;
+        .container{
+            width: 90%;
+            .newsText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .newsCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                .newsCard{
+                    width: 46%;
+                    .cardImg{
+                        width: 100%;
+                    }
+                    .cardText{
+                        width: 100%;
+                        h2{
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                        .etrafli{
+                            width: 100%;
+                            button{
+                                width: 20%;
+                            }
+                            p{
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .news{
+        width: 100%;
+        .container{
+            width: 90%;
+            .newsText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .newsCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+                .newsCard{
+                    width: 47%;
+                    .cardImg{
+                        width: 100%;
+                    }
+                    .cardText{
+                        width: 100%;
+                        h2{
+                            font-size: 18px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                        .etrafli{
+                            width: 100%;
+                            button{
+                                width: 20%;
+                            }
+                            p{
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .news{
+        width: 100%;
+        .container{
+            width: 99%;
+        }
+    }
+}

@@ -5,11 +5,27 @@ import logoImg from '../../image/logo.svg';
 import { setCurrency } from '../../redux/slices/currencySlice';
 import { setLanguage } from '../../redux/slices/languageSlice';
 import { useNavigate } from 'react-router-dom';
+import { TiThMenu } from "react-icons/ti";
+import { toggleMenu, closeMenu } from '../../redux/slices/menuSlice'; 
+import { RiCloseLargeLine } from "react-icons/ri";
+import { SlSocialFacebook, SlSocialInstagram, SlSocialYoutube } from 'react-icons/sl';
+import { SiWhatsapp } from 'react-icons/si';
+import { PiTelegramLogoDuotone } from 'react-icons/pi';
+
 
 const Header = () => {
   const dispatch = useDispatch();
+  const isOpen = useSelector(state => state.menu.isOpen);
   const currency = useSelector((state) => state.currency.currency);
   const language = useSelector((state) => state.language.language);
+
+  const handleMenuToggle = () => {
+    dispatch(toggleMenu());
+  };
+
+  const handleMenuClose = () => {
+    dispatch(closeMenu());
+  };
 
   const handleCurrencyChange = (currency) => {
     dispatch(setCurrency(currency));
@@ -17,20 +33,19 @@ const Header = () => {
 
   const handleLanguageChange = (language) => {
     dispatch(setLanguage(language));
-    // Sayfa yenileme veya içerik değişimi işlemi burada yapılabilir
   };
 
-  const navigation = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <div className={styles.headerBox}>
       <div className={styles.headerTop}>
         <div className={styles.container}>
           <div className={styles.information}>
-            <button onClick={() => navigation('/about')}>Haqqımızda</button>
-            <button onClick={() => navigation('/faq')}>Suallar</button>
-            <button onClick={() => navigation('/kargo-chatdirilma-shertleri')}>Daşınma şərtləri</button>
-            <button onClick={() => navigation('/shexsi-melumatlarin-qorunmasi')}>Şəxsi məlumatların qorunması</button>
+            <button onClick={() => navigate('/about')}>Haqqımızda</button>
+            <button onClick={() => navigate('/faq')}>Suallar</button>
+            <button onClick={() => navigate('/kargo-chatdirilma-shertleri')}>Daşınma şərtləri</button>
+            <button onClick={() => navigate('/shexsi-melumatlarin-qorunmasi')}>Şəxsi məlumatların qorunması</button>
           </div>
           <div className={styles.contact}>
             <div className={styles.valyuta}>
@@ -54,24 +69,54 @@ const Header = () => {
           <div className={styles.logo}>
             <img src={logoImg} alt="logo" />
           </div>
+          <div className={styles.menu}>
+            <button onClick={handleMenuToggle}><TiThMenu /></button>
+            {isOpen && (
+              <div className={styles.menuBar}>
+                <div className={styles.close}  onClick={handleMenuClose}>
+                  <RiCloseLargeLine />
+                </div>
+                <ul>
+                  <li onClick={() => navigate('/')}><a href="">Ana Səhifə</a></li>
+                  <li onClick={() => navigate('/tariffs')}><a href="">Tariflər</a></li>
+                  <li><a href="">Mağazalar</a></li>
+                  <li onClick={() => navigate('/kargo-xidmetleri')}><a href="">Xidmətlər</a></li>
+                  <li><a href="">Xəbərlər</a></li>
+                  <li onClick={() => navigate('/contact')}><a href="">Əlaqə</a></li>
+                  <li onClick={() => navigate('/about')}><a href="">Haqqımızda</a></li>
+                  <li onClick={() => navigate('/faq')}><a href="">Suallar</a></li>
+                  <li onClick={() => navigate('/kargo-chatdirilma-shertleri')}><a href="">Daşınma şərtləri</a></li>
+                  <li onClick={() => navigate('/shexsi-melumatlarin-qorunmasi')}><a href="">Şəxsi məlumatların qorunması</a></li>
+                </ul>
+                <div className={styles.follow}>
+                  <p>Bizi sosial şəbəkələrdə izləyin</p>
+                  <button><SlSocialFacebook /></button>
+                  <button><SlSocialInstagram /></button>
+                  <button><SiWhatsapp /></button>
+                  <button><PiTelegramLogoDuotone /></button>
+                  <button><SlSocialYoutube /></button>
+              </div>
+              </div>
+            )}
+          </div>
           <div className={styles.navBar}>
             <ul>
-              <li onClick={() => navigation('/')}><a href="">Ana Səhifə</a></li>
-              <li onClick={() => navigation('/tariffs')}><a href="">Tariflər</a></li>
+              <li onClick={() => navigate('/')}><a href="">Ana Səhifə</a></li>
+              <li onClick={() => navigate('/tariffs')}><a href="">Tariflər</a></li>
               <li><a href="">Mağazalar</a></li>
-              <li onClick={() => navigation('/kargo-xidmetleri')}><a href="">Xidmətlər</a></li>
+              <li onClick={() => navigate('/kargo-xidmetleri')}><a href="">Xidmətlər</a></li>
               <li><a href="">Xəbərlər</a></li>
-              <li><a href="">Əlaqə</a></li>
+              <li onClick={() => navigate('/contact')}><a href="">Əlaqə</a></li>
             </ul>
           </div>
           <div className={styles.logIn}>
-            <span onClick={() => navigation('/login')}>Giriş et</span>
-            <button onClick={() => navigation('/register')}>Qeydiyyat</button>
+            <span onClick={() => navigate('/login')}>Giriş et</span>
+            <button onClick={() => navigate('/register')}>Qeydiyyat</button>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Header;

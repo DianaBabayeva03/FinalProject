@@ -116,3 +116,286 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .tariffsOnAllProducts{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            .turkey{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 25px;
+                .turkeyFlag{
+                    width: 60%;
+                    span{
+                        font-weight: 700;
+                        font-size: 25px;
+                    }
+                }
+                h3{
+                    font-size: 20px;
+                }
+            }
+            .tariffs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 20px;
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .tariffPrices{
+                width: 100%;
+                h4{
+                    font-weight: 800;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                }
+                p{
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .line{
+                        width: 20%;
+                        height: 6px;
+                        border-top: 1px dashed rgba(255, 255, 255, 0.639);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .tariffsOnAllProducts{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            .turkey{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 25px;
+                .turkeyFlag{
+                    width: 32%;
+                    span{
+                        font-weight: 700;
+                        font-size: 25px;
+                    }
+                }
+                h3{
+                    font-size: 20px;
+                }
+            }
+            .tariffs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 20px;
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .tariffPrices{
+                width: 100%;
+                h4{
+                    font-weight: 800;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                }
+                p{
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .line{
+                        width: 50%;
+                        height: 6px;
+                        border-top: 1px dashed rgba(255, 255, 255, 0.639);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .tariffsOnAllProducts{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            .turkey{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                .turkeyFlag{
+                    width: 28%;
+                    span{
+                        font-weight: 700;
+                        font-size: 25px;
+                    }
+                }
+                h3{
+                    width: 50%;
+                    font-size: 20px;
+                }
+            }
+            .tariffs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 20px;
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .tariffPrices{
+                width: 100%;
+                h4{
+                    font-weight: 800;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                }
+                p{
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .line{
+                        width: 50%;
+                        height: 6px;
+                        border-top: 1px dashed rgba(255, 255, 255, 0.639);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .tariffsOnAllProducts{
+        width: 100%;
+        .container{
+            width: 99%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            .turkey{
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 25px;
+                .turkeyFlag{
+                    width: 40%;
+                    span{
+                        font-weight: 700;
+                        font-size: 25px;
+                    }
+                }
+                h3{
+                    font-size: 20px;
+                }
+            }
+            .tariffs{
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 20px;
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .tariffPrices{
+                width: 48%;
+                h4{
+                    font-weight: 800;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                }
+                p{
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 14px;
+                    font-style: normal;
+                    line-height: normal;
+                    color: white;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .line{
+                        width: 50%;
+                        height: 6px;
+                        border-top: 1px dashed rgba(255, 255, 255, 0.639);
+                    }
+                }
+            }
+        }
+    }
+}

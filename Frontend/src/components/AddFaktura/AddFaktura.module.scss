@@ -9,7 +9,6 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
-        // border-bottom: 1px solid rgba(128, 128, 128, 0.283);
         .addFakturaText{
             width: 15%;
             display: flex;
@@ -79,6 +78,121 @@
                 &:hover{
                     cursor: pointer;
                     background-color: rgb(101, 92, 116);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .addFaktura{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .addFakturaText{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15px;
+            }
+            .addFakturaBtns{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .addFaktura{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .addFakturaText{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15px;
+            }
+            .addFakturaBtns{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .addFaktura{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .addFakturaText{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15px;
+            }
+            .addFakturaBtns{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                button{
+                    width: 47%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .addFaktura{
+        width: 100%;
+        .container{
+            width: 99%;
+            .addFakturaText{
+                width: 40%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15px;
+            }
+            .addFakturaBtns{
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                button{
+                    width: 46%;
                 }
             }
         }

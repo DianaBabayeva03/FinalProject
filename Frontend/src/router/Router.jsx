@@ -10,6 +10,8 @@ import ShexsiMelumatlar from '../pages/ShexsiMelumatlar/ShexsiMelumatlar'
 import Tarifler from '../pages/Tarifler/Tarifs'
 import Dashboard from '../pages/Dashboard/Dashboard'
 import Profile from '../pages/Profile/Profile'
+import Xidmetler from '../pages/Xidmetler/Xidmetler'
+import Elaqe from '../pages/Elaqe/Elaqe'
 
 const Router = () => {
   return (
@@ -25,6 +27,8 @@ const Router = () => {
             <Route path='/kargo-chatdirilma-shertleri' element={<KargoChatdirilma />} />
             <Route path='/shexsi-melumatlarin-qorunmasi' element={<ShexsiMelumatlar />} />
             <Route path='/tariffs' element={<Tarifler />} />
+            <Route path='/kargo-xidmetleri' element={<Xidmetler />} />
+            <Route path='/contact' element={<Elaqe />} />
         </Routes>
     </BrowserRouter>
   )

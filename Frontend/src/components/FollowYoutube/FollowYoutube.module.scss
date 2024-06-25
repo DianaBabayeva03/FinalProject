@@ -318,3 +318,375 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .followYoutube{
+        width: 100%;
+        .container{
+            width: 90%;
+            .followYoutubeText{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 30px;
+                h1{
+                    width: 100%;
+                    font-size: 28px;
+                }
+                a{
+                    font-size: 26px;
+                    .icon{
+                        font-size: 32px;
+                    }
+                }
+            }
+            .followYoutubeCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 0;
+                gap: 20px;
+                .cardLeft{
+                    width: 100%;
+                    .cardImg{
+                        width: 100%;
+                        border-radius: 10px;
+                        img{
+                            width: 100%;
+                            border-radius: 10px;
+                            transition: 0.5s;
+                        }
+                    }
+                    .cardText{
+                        width: 100%;
+                        padding: 10px;
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            font-size: 16px;
+                            font-weight: 800;
+                            font-style: normal;
+                            line-height: normal;
+                            color: white;
+                        }
+                        p{
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            font-size: 12px;
+                            font-weight: 600;
+                            font-style: normal;
+                            line-height: normal;
+                            color: white;
+                            gap: 8px;
+                        }
+                    }
+                    button{
+                        top: 40px;
+                    }
+                }
+                .cardRight{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+                    .cardRightTop{
+                        position: relative;
+                        width: 100%;
+                        .cardImg{
+                            width: 100%;
+                            border-radius: 10px;
+                            img{
+                                width: 100%;
+                                border-radius: 10px;
+                                transition: 0.5s;
+                            }
+                        }
+                        .cardText{
+                            width: 100%;
+                            padding: 10px;
+                            h2{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                font-size: 16px;
+                            }
+                        }
+                        button{
+                            top: 45px;
+                        }
+                    }
+                    .cardRightBottom{
+                        width: 100%;
+                        .cardImg{
+                            width: 100%;
+                            border-radius: 10px;
+                            img{
+                                width: 100%;
+                                border-radius: 10px;
+                                transition: 0.5s;
+                            }
+                        }
+                        .cardText{
+                            width: 100%;
+                            padding: 10px;
+                            h2{
+                                font-size: 16px;
+                            }
+                        }
+                        button{
+                            top: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .followYoutube{
+        width: 100%;
+        .container{
+            width: 90%;
+            .followYoutubeText{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 30px;
+                h1{
+                    width: 100%;
+                    font-size: 28px;
+                }
+                a{
+                    font-size: 26px;
+                    .icon{
+                        font-size: 32px;
+                    }
+                }
+            }
+            .followYoutubeCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 0;
+                gap: 20px;
+                .cardLeft{
+                    width: 100%;
+                    .cardImg{
+                        width: 100%;
+                        border-radius: 10px;
+                        img{
+                            width: 100%;
+                            border-radius: 10px;
+                            transition: 0.5s;
+                        }
+                    }
+                    .cardText{
+                        width: 100%;
+                        padding: 10px;
+                        h2{
+                            font-size: 18px;
+                        }
+                    }
+                    button{
+                        top: 100px;
+                    }
+                }
+                .cardRight{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+                    .cardRightTop{
+                        position: relative;
+                        width: 100%;
+                        .cardImg{
+                            width: 100%;
+                            border-radius: 10px;
+                            img{
+                                width: 100%;
+                                border-radius: 10px;
+                                transition: 0.5s;
+                            }
+                        }
+                        .cardText{
+                            width: 100%;
+                            padding: 10px;
+                            h2{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                font-size: 18px;
+                            }
+                        }
+                        button{
+                            top: 100px;
+                        }
+                    }
+                    .cardRightBottom{
+                        width: 100%;
+                        .cardImg{
+                            width: 100%;
+                            border-radius: 10px;
+                            img{
+                                width: 100%;
+                                border-radius: 10px;
+                                transition: 0.5s;
+                            }
+                        }
+                        .cardText{
+                            width: 100%;
+                            padding: 10px;
+                            h2{
+                                font-size: 18px;
+                            }
+                        }
+                        button{
+                            top: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .followYoutube{
+        width: 100%;
+        .container{
+            width: 90%;
+            .followYoutubeText{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 30px;
+                h1{
+                    width: 100%;
+                    font-size: 28px;
+                }
+                a{
+                    font-size: 26px;
+                    .icon{
+                        font-size: 32px;
+                    }
+                }
+            }
+            .followYoutubeCards{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 0;
+                .cardLeft{
+                    width: 66%;
+                    .cardImg{
+                        width: 100%;
+                        border-radius: 10px;
+                        img{
+                            width: 100%;
+                            border-radius: 10px;
+                            transition: 0.5s;
+                        }
+                    }
+                    .cardText{
+                        width: 100%;
+                        padding: 10px;
+                        h2{
+                            font-size: 18px;
+                        }
+                    }
+                    button{
+                        top: 100px;
+                    }
+                }
+                .cardRight{
+                    width: 31%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+                    .cardRightTop{
+                        position: relative;
+                        width: 100%;
+                        .cardImg{
+                            width: 100%;
+                            border-radius: 10px;
+                            img{
+                                width: 100%;
+                                border-radius: 10px;
+                                transition: 0.5s;
+                            }
+                        }
+                        .cardText{
+                            width: 100%;
+                            padding: 10px;
+                            h2{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                font-size: 18px;
+                            }
+                        }
+                        button{
+                            top: 40px;
+                        }
+                    }
+                    .cardRightBottom{
+                        width: 100%;
+                        .cardImg{
+                            width: 100%;
+                            border-radius: 10px;
+                            img{
+                                width: 100%;
+                                border-radius: 10px;
+                                transition: 0.5s;
+                            }
+                        }
+                        .cardText{
+                            width: 100%;
+                            padding: 10px;
+                            h2{
+                                font-size: 18px;
+                            }
+                        }
+                        button{
+                            top: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .followYoutube{
+        width: 100%;
+        .container{
+            width: 99%;
+        }
+    }
+}
