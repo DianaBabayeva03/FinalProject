@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+.servicesBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px 0;
+        gap: 40px;
+        .servicesText{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            h1{
+                font-size: 30px;
+                font-weight: 800;
+                color: rgb(123, 92, 225);
+                font-style: normal;
+                line-height: normal;
+            }
+        }
+        .servicesCards{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            padding-top: 40px;
+            .servicesCard{
+                width: 48%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 25px;
+                .cardImg{
+                    background-color: transparent;
+                }
+                .cardText{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 5px;
+                    h2{
+                        font-size: 20px;
+                        font-weight: 800;
+                        color: 
+                        rgb(40, 33, 65);
+                        font-style: normal;
+                        line-height: normal;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: 
+                        rgb(40, 33, 65);
+                        font-style: normal;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
