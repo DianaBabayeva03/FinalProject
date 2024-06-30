@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+.modalButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+ 
+  button {
+    width: 48%;
+    color: white;
+    padding: 6px;
+    border: none;
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
+.adminPanel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 0;
+    gap: 30px;
+    .adminPanelBtns {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid rgb(40, 33, 65);
+      gap: 25px;
+      button {
+        background-color: rgb(40, 33, 65);
+        color: white;
+        padding: 15px 35px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: none;
+        font-size: 18px;
+        font-weight: 800;
+        font-style: normal;
+        line-height: normal;
+        transition: 0.5s ease;
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(40, 33, 65, 0.804);
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.619);
+      border-radius: 10px;
+      padding: 30px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .usersContent {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 15px;
+        .userProfile {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 8px;
+          border-radius: 10px;
+          border: 1px solid rgb(40, 33, 65);
+          padding: 20px;
+          h3 {
+            color: rgb(123, 92, 225);
+            font-size: 20px;
+            font-weight: 700;
+          }
+          span {
+            color: rgb(40, 33, 65);
+            font-weight: 600;
+            font-size: 16px;
+          }
+          p {
+            color: rgb(40, 33, 65);
+            font-weight: 600;
+            font-size: 14px;
+          }
+          button {
+            background-color: rgb(135, 1, 1);
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 30px;
+          }
+        }
+      }
+      .newsContent{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 15px;
+        h2{
+          font-size: 30px;
+          font-weight: 800;
+          color: rgb(123, 92, 225);
+        }
+        .newsItem{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 15px;
+          border: 1px solid rgb(40, 33, 65);
+          border-radius: 10px;
+          h3{
+            font-size: 24px;
+            font-weight: 700;
+            color: rgb(40, 33, 65);
+          }
+          p{
+            font-size: 14px;
+            font-weight: 400;
+            color: black;
+          }
+          button{
+            border: none;
+            background-color: rgb(123, 92, 225);
+            color: white;
+            border-radius: 10px;
+            padding: 10px 25px;
+            font-size: 20px;
+          }
+        }
+      }
+      .newsForm{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 15px;
+        h2{
+          font-size: 30px;
+          font-weight: 800;
+          color: rgb(123, 92, 225);
+        }
+        form{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 15px;
+          input{
+            width: 45%;
+            border: 1px solid rgb(40, 33, 65);
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
+            padding: 15px 5px;
+          }
+          textarea{
+            width: 45%;
+            border: 1px solid rgb(40, 33, 65);
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
+            padding: 15px 5px;
+          }
+          .dropzone{
+            width: 45%;
+            border: 1px solid rgb(40, 33, 65);
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
+            padding: 15px 5px;
+          }
+          button{
+            background-color: rgb(40, 33, 65);
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 25px;
+            transition: 0.5s ease;
+            &:hover{
+              cursor: pointer;
+              background-color: rgba(40, 33, 65, 0.804);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.newsImage{
+  width: 100px;
+  height: 100px;
+}

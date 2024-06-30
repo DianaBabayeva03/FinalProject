@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+  }
+  
+  .faq {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+      width: 80%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 40px 0;
+    }
+    .row {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 40px;
+    }
+    .faqTitle {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      h1 {
+        font-size: 30px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: normal;
+        color: rgb(123, 92, 225);
+      }
+    }
+    .faq {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5px;
+      .questionBox {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.317);
+        cursor: pointer;
+        .question {
+          color: black;
+          font-size: 14px;
+          font-weight: 800;
+          font-style: normal;
+          line-height: normal;
+          &:hover {
+            color: rgb(39, 32, 65);
+          }
+        }
+        .iconOpen{
+            font-size: 20px;
+        }
+        .iconClose {
+          font-size: 20px;
+          transition: transform 0.3s;
+        }
+        .iconOpen {
+          transform: rotate(0deg);
+        }
+      }
+      .answerBoxClosed {
+        display: none;
+        opacity: 0;
+        height: 0;
+        transition: opacity 0.3s, height 0.3s;
+      }
+      .answerBoxOpen {
+        display: block;
+        opacity: 1;
+        height: auto;
+        transition: opacity 0.3s, height 0.3s;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          color: rgb(40, 33, 65);
+          margin: 5px 0;
+        }
+      }
+    }
+  }  

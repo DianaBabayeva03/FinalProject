@@ -13,6 +13,8 @@ import Profile from '../pages/Profile/Profile'
 import Xidmetler from '../pages/Xidmetler/Xidmetler'
 import Elaqe from '../pages/Elaqe/Elaqe'
 import Magazalar from '../pages/Magazalar/Magazalar'
+import News from '../pages/News/News'
+import NewsOne from '../components/NewsList/NewsOne'
 
 const Router = () => {
   return (
@@ -31,6 +33,8 @@ const Router = () => {
             <Route path='/kargo-xidmetleri' element={<Xidmetler />} />
             <Route path='/contact' element={<Elaqe />} />
             <Route path='/shops' element={<Magazalar />} />
+            <Route path='xeberler' element={<News />} />
+            <Route path='/puma-ayaqqabilari' element={<NewsOne />} />
         </Routes>
     </BrowserRouter>
   )

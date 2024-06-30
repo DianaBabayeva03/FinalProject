@@ -32,7 +32,7 @@ const Shops = () => {
                 </div>
                 <div className={styles.contentsFilter}>
                     <button onClick={() => dispatch(selectCategory(null))}>
-                        Tümünü Göster
+                        Hamısını Göstər
                     </button>
                     {categories.map(category => (
                     <button key={category} onClick={() => dispatch(selectCategory(category))}>

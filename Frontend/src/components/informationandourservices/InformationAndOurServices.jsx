@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './InformationAndOurServices.module.scss'
 import hevale from '../../image/hevale.svg'
 import tecili from '../../image/tecili.svg'
-import kuryersifarishet from '../../image/Kuryersifarişet.svg'
+import kuryersifarishet from '../../image/Kuryersifariset.svg'
 
 const InformationAndOurServices = () => {
   return (

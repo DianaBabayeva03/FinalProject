@@ -81,7 +81,7 @@ const Header = () => {
                   <li onClick={() => navigate('/tariffs')}><a href="">Tariflər</a></li>
                   <li onClick={() => navigate('/shops')}><a href="">Mağazalar</a></li>
                   <li onClick={() => navigate('/kargo-xidmetleri')}><a href="">Xidmətlər</a></li>
-                  <li><a href="">Xəbərlər</a></li>
+                  <li onClick={() => navigate('/xeberler')}><a href="">Xəbərlər</a></li>
                   <li onClick={() => navigate('/contact')}><a href="">Əlaqə</a></li>
                   <li onClick={() => navigate('/about')}><a href="">Haqqımızda</a></li>
                   <li onClick={() => navigate('/faq')}><a href="">Suallar</a></li>
@@ -105,7 +105,7 @@ const Header = () => {
               <li onClick={() => navigate('/tariffs')}><a href="">Tariflər</a></li>
               <li onClick={() => navigate('/shops')}><a href="">Mağazalar</a></li>
               <li onClick={() => navigate('/kargo-xidmetleri')}><a href="">Xidmətlər</a></li>
-              <li><a href="">Xəbərlər</a></li>
+              <li onClick={() => navigate('/xeberler')}><a href="">Xəbərlər</a></li>
               <li onClick={() => navigate('/contact')}><a href="">Əlaqə</a></li>
             </ul>
           </div>
@@ -117,12 +117,14 @@ const Header = () => {
                 </div>
               </span>
               
+              
             ) : (
               <>
                 <span onClick={() => navigate('/login')}>Giriş et</span>
                 <button onClick={() => navigate('/register')}>Qeydiyyat</button>
               </>
             )}
+            <p onClick={() => navigate('/dashboard')}>Admin Panel</p>
           </div>
         </div>
       </div>

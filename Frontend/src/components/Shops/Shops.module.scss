@@ -78,3 +78,161 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .shopsBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .shopsBoxText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+            }
+            .shopsBoxContent{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                .contentsCards{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 22px;
+                    .contentsCard{
+                        width: 45%;
+                    }
+                }
+                .contentsFilter{
+                    border-top: 1px solid rgba(40, 33, 65, 0.436);
+                    border-left: none;
+                    padding-left: 0;
+                    padding-top: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .shopsBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .shopsBoxText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+            }
+            .shopsBoxContent{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                .contentsCards{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 22px;
+                    .contentsCard{
+                        width: 30%;
+                    }
+                }
+                .contentsFilter{
+                    border-top: 1px solid rgba(40, 33, 65, 0.436);
+                    border-left: none;
+                    padding-left: 0;
+                    padding-top: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .shopsBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .shopsBoxText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+            }
+            .shopsBoxContent{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                .contentsCards{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 22px;
+                    .contentsCard{
+                        width: 22%;
+                    }
+                }
+                .contentsFilter{
+                    border-top: 1px solid rgba(40, 33, 65, 0.436);
+                    border-left: none;
+                    padding-left: 0;
+                    padding-top: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .shopsBox{
+        width: 100%;
+        .container{
+            width: 99%;
+            .shopsBoxText{
+                width: 100%;
+                h1{
+                    font-size: 28px;
+                }
+            }
+            .shopsBoxContent{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                .contentsCards{
+                    width: 68%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 22px;
+                    .contentsCard{
+                        width: 22%;
+                    }
+                }
+                .contentsFilter{
+                    width: 28%;
+                }
+            }
+        }
+    }
+}

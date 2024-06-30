@@ -76,3 +76,118 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .servicesBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .servicesText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+            }
+            .servicesCards{
+                width: 100%;
+                .servicesCard{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .cardImg{
+                        background-color: transparent;
+                    }
+                    .cardText{
+                        width: 100%;
+                        h2{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .servicesBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .servicesText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+            }
+            .servicesCards{
+                width: 100%;
+                .servicesCard{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .cardImg{
+                        background-color: transparent;
+                    }
+                    .cardText{
+                        width: 100%;
+                        h2{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .servicesBox{
+        width: 100%;
+        .container{
+            width: 90%;
+            .servicesText{
+                width: 100%;
+                h1{
+                    font-size: 24px;
+                }
+            }
+            .servicesCards{
+                width: 100%;
+                .servicesCard{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .cardImg{
+                        background-color: transparent;
+                    }
+                    .cardText{
+                        width: 100%;
+                        h2{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .servicesBox{
+        width: 100%;
+        .container{
+            width: 99%;
+            .servicesCards{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 15px;
+                .servicesCard{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}

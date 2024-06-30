@@ -136,5 +136,266 @@
                 color: rgb(40, 33, 65);
             }
         }
+        .calculate{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgb(40, 33, 65);
+            h1{
+                font-size: 26px;
+                font-weight: 700;
+                color: rgb(123, 92, 225);
+            }
+            .inputContainer{
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                label{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: rgb(40, 33, 65);
+                }
+                input{
+                    width: 65%;
+                    border-radius: 10px;
+                    border: 1px solid rgb(123, 92, 225);
+                    outline: none;
+                    padding: 10px 15px;
+                }
+            }
+            button{
+                border: 1px solid rgb(123, 92, 225);
+                border-radius: 10px;
+                padding: 10px 35px;
+                color: rgb(40, 33, 65);
+                background-color: transparent;
+                font-size: 14px;
+                font-weight: 800;
+                transition: 0.5s ease;
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgba(123, 92, 225, 0.301);
+                }
+            }
+            .resulContainer{
+                h2{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+    .liquidProducts{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            gap: 40px;
+            .tariffs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                h1{
+                    font-size: 26px;
+                }
+                .tariffsCards{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+                    .tariffsCard{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .cardText{
+                            h2{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                    
+                }
+                .liquidProductsText{
+                    width: 95%;
+                    .equal{
+                        display: none;
+                    }
+                }
+            }
+            .calculate{
+                width: 100%;
+                h1{
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: rgb(123, 92, 225);
+                }
+                .inputContainer{
+                    width:100%;
+                    input{
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .liquidProducts{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            gap: 40px;
+            .tariffs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                h1{
+                    font-size: 26px;
+                }
+                .tariffsCards{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+                    .tariffsCard{
+                        width: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .cardText{
+                            h2{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                    
+                }
+                .liquidProductsText{
+                    width: 95%;
+                    .equal{
+                        display: none;
+                    }
+                }
+            }
+            .calculate{
+                width: 100%;
+                h1{
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: rgb(123, 92, 225);
+                }
+                .inputContainer{
+                    width:100%;
+                    input{
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .liquidProducts{
+        width: 100%;
+        .container{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            gap: 40px;
+            .tariffs{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+                h1{
+                    font-size: 28px;
+                }
+                .tariffsCards{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+                    .tariffsCard{
+                        width: 30%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .cardText{
+                            h2{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                    
+                }
+                .liquidProductsText{
+                    width: 95%;
+                    .equal{
+                        display: none;
+                    }
+                }
+            }
+            .calculate{
+                width: 100%;
+                h1{
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: rgb(123, 92, 225);
+                }
+                .inputContainer{
+                    width:100%;
+                    input{
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px) and (max-width: 1200px) {
+    .liquidProducts{
+        width: 100%;
+        .container{
+            width: 99%;
+        }
     }
 }
