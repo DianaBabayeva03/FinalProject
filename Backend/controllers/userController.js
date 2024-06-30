@@ -108,10 +108,44 @@ const updateUserProfile = async (req, res) => {
   }
 };
 
+const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find({});
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+// const getUsers = async  (req, res) => {
+//   // Örnek kullanıcı verisi
+//   const users = [
+//     { _id: '1', name: 'User 1', email: 'user1@example.com' },
+//     { _id: '2', name: 'User 2', email: 'user2@example.com' },
+//   ];
+
+//   res.json(users);
+// };
+
+const deleteUsers = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const deletedUser = await User.findByIdAndDelete(userId);
+
+    if (!deletedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json({ message: `User with ID ${userId} deleted successfully` });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 export {
   authUser,
   registerUser,
   logoutUser,
   getUserProfile,
   updateUserProfile,
+  getAllUsers,
+  deleteUsers,
+  // getUsers,
 };
