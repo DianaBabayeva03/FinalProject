@@ -1,30 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import styles from './Login.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCredentials } from '../../redux/slices/authSlice';
-import {useLoginMutation} from '../../redux/slices/usersApiSlice'
-import { toast } from 'react-toastify';
-import 'react-toastify/ReactToastify.css';
+import { useLoginMutation } from '../../redux/slices/usersApiSlice';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import logo from '../../image/logo.svg';
 import playStore from '../../image/playstore.svg';
 import appStore from '../../image/appstore.svg';
 import visaMaster from '../../image/visamaster.svg';
 
 const Login = () => {
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginError, setLoginError] = useState('');
-  const navigation = useNavigate();
+  const navigate = useNavigate();
 
-  const { userInfo } = useSelector(state => state.auth);
+  const { userInfo } = useSelector((state) => state.auth);
 
   useEffect(() => {
     if (userInfo) {
-      navigation('/');
+      navigate('/');
     }
-  }, [navigation, userInfo]);
+  }, [navigate, userInfo]);
 
   const dispatch = useDispatch();
 
@@ -32,20 +30,28 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      const res = await login({ email, password }).unwrap();
-      dispatch(setCredentials({ ...res }));
-      navigation('/');
-    } catch (error) {
-      toast.error('E-mail və ya şifrə səhvdir!')
+
+    if (!email || !password) {
+      toast.error('Lütfen hem e-posta hem de şifre girin.');
+      return;
     }
-  }
+
+    try {
+      const data = await login({ email, password }).unwrap();
+      dispatch(setCredentials(data));
+      navigate('/');
+      toast.success('Giriş başarılı!');
+    } catch (error) {
+      console.error('Giriş hatası:', error);
+      toast.error(`Giriş başarısız: ${error.data?.message || error.message}`);
+    }
+  };
 
   return (
     <div className={styles.logIn}>
       <div className={styles.container}>
         <div className={styles.headerBox}>
-          <div className={styles.logo} onClick={() => navigation('/')}>
+          <div className={styles.logo} onClick={() => navigate('/')}>
             <img src={logo} alt="logo" />
           </div>
         </div>
@@ -67,21 +73,18 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <h6 className={styles.loginmessage} onClick={() => navigation('/register')}>
+            <h6 className={styles.loginMessage} onClick={() => navigate('/register')}>
               <span>Qeydiyyatdan keç</span>
             </h6>
-            {loginError && <div className={styles.error}>{loginError}</div>}
             <button type="submit" disabled={isLoading}>
               {isLoading ? 'Logging...' : 'Daxil ol'}
             </button>
           </form>
-          <div className={styles.daxilOl}>
-            
-          </div>
+          <div className={styles.daxilOl}></div>
         </div>
         <div className={styles.footerBox}>
           <div className={styles.textBox}>
-              <p>© 2021 Kargolux | Bütün Hüquqlar Qorunur</p>
+            <p>© 2021 Kargolux | Bütün Hüquqlar Qorunur</p>
           </div>
           <div className={styles.mobilTetbiqRight}>
             <span>Mobil Tətbiqi yüklə</span>
@@ -91,8 +94,9 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer position="top-right" />
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

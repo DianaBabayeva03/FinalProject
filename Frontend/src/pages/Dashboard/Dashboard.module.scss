@@ -1,8 +1,10 @@
 .container {
+    background-image: url('https://kargolux.az/kargolux/assets/images/img/background.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 150vh;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 .header {

@@ -8,6 +8,7 @@ import { useLogoutMutation, useUpdateUserMutation } from "../../redux/slices/use
 import Header from "../../components/Header/Header";
 import Footer from '../../components/Footer/Footer';
 import UserProfile from "../../components/UserProfile/UserProfile";
+import FollowWe from '../../components/FollowWe/FollowWe';
 
 const Profile = () => {
   const [email, setEmail] = useState("");
@@ -49,7 +50,7 @@ const Profile = () => {
         toast.success("Profile updated successfully");
         setPassword('');
         setConfirmPassword('');
-        navigate("/dashboard");
+        navigate("/profile");
       } catch (error) {
         toast.error(error.data.message || error.message);
       }
@@ -115,6 +116,7 @@ const Profile = () => {
         </div>
       </div> */}
       <UserProfile />
+      <FollowWe />
       <Footer />
     </div>
   );
