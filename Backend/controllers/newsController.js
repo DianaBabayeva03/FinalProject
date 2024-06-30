@@ -1,7 +1,7 @@
 import News from '../models/newsModel.js';
 import path from 'path';
 import { promises as fs } from 'fs';
-// import abc from '../../../dərs/'
+import { fileURLToPath } from 'url';
 
 // Bütün xəbərləri göstərmək
 const getAllNews = async (req, res) => {
@@ -11,28 +11,37 @@ const getAllNews = async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
-}; 
+};
 
 // Yeni xəbər əlavə etmək
 const createNews = async (req, res) => {
-  const { title, content, author } = req.body;
-  const { image } = req.file; // Şəkil yüklənməsi üçün
+  const { title, content, author, date } = req.body;
+  let image = null;
+
+  if (req.file) {
+    try {
+      const imageBuffer = await fs.readFile(req.file.path);
+      image = `data:${req.file.mimetype};base64,${imageBuffer.toString('base64')}`;
+      await fs.unlink(req.file.path); // Dosyayı yükleme dizininden sil
+    } catch (error) {
+      console.error('Dosya okuma hatası:', error);
+      res.status(500).json({ message: 'Dosya okuma hatası' });
+      return;
+    }
+  }
 
   const news = new News({
     title,
     content,
     author,
-    image: image ? `/dərs/${image.filename}` : null
+    image,
+    date
   });
 
   try {
     const newNews = await news.save();
     res.status(201).json(newNews);
   } catch (err) {
-    if (image) {
-      // Xəta halında şəkili silmək üçün
-      await fs.unlink(path.join(__dirname, `../../../dərs/${image.filename}`));
-    }
     res.status(400).json({ message: err.message });
   }
 };
@@ -40,9 +49,35 @@ const createNews = async (req, res) => {
 // Xəbəri dəyişmək
 const updateNews = async (req, res) => {
   const { id } = req.params;
+  const { title, content, author, date } = req.body;
+  let image = null;
+
+  if (req.file) {
+    try {
+      const imageBuffer = await fs.readFile(req.file.path);
+      image = `data:${req.file.mimetype};base64,${imageBuffer.toString('base64')}`;
+      await fs.unlink(req.file.path); // Dosyayı yükleme dizininden sil
+    } catch (error) {
+      console.error('Dosya okuma hatası:', error);
+      res.status(500).json({ message: 'Dosya okuma hatası' });
+      return;
+    }
+  }
 
   try {
-    const updatedNews = await News.findByIdAndUpdate(id, req.body, { new: true });
+    const news = await News.findById(id);
+
+    if (!news) {
+      return res.status(404).json({ message: 'Xəbər tapılmadı' });
+    }
+
+    news.title = title || news.title;
+    news.content = content || news.content;
+    news.author = author || news.author;
+    news.date = date || news.date;
+    news.image = image || news.image;
+
+    const updatedNews = await news.save();
     res.json(updatedNews);
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -55,10 +90,6 @@ const deleteNews = async (req, res) => {
 
   try {
     const news = await News.findByIdAndDelete(id);
-    if (news.image) {
-      // Şəkili silmək üçün
-      await fs.unlink(path.join(__dirname, `../${news.image}`));
-    }
     res.json({ message: 'Xəbər uğurla silindi' });
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -66,8 +97,8 @@ const deleteNews = async (req, res) => {
 };
 
 export {
-    getAllNews,
-    createNews,
-    updateNews,
-    deleteNews,
-}
+  getAllNews,
+  createNews,
+  updateNews,
+  deleteNews,
+};

@@ -1,6 +1,8 @@
 import express from 'express';
 import multer from 'multer';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import fs from 'fs';
 import {
   getAllNews,
   createNews,
@@ -10,10 +12,18 @@ import {
 
 const router = express.Router();
 
-// Şəkil üçün multer konfigurasiyası
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './public/uploads/');
+    const uploadPath = path.join(__dirname, '../../public/uploads');
+    // Klasörün var olup olmadığını kontrol et
+    if (!fs.existsSync(uploadPath)) {
+      // Klasörü oluştur
+      fs.mkdirSync(uploadPath, { recursive: true });
+    }
+    cb(null, uploadPath);
   },
   filename: function (req, file, cb) {
     cb(null, `${Date.now()}${path.extname(file.originalname)}`);
@@ -22,16 +32,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Bütün xəbərləri göstərmək üçün endpoint
 router.get('/', getAllNews);
-
-// Yeni xəbər əlavə etmək üçün endpoint (şəkil yükləməsi ilə birlikdə)
 router.post('/', upload.single('image'), createNews);
-
-// Xəbəri dəyişmək üçün endpoint
-router.put('/:id', updateNews);
-
-// Xəbəri silmək üçün endpoint
+router.put('/:id', upload.single('image'), updateNews);
 router.delete('/:id', deleteNews);
 
 export default router;
